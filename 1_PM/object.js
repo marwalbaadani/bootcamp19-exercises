@@ -3,5 +3,15 @@
 // HINT: recursion may help here
 
 const hasFalsyValue = obj => {
-  return false;
+    let falsy = false
+    for (let o in obj) {
+        if (!obj[o]){
+            falsy = true;
+        }
+    }
+  return falsy;
 };
+
+// var myObj1 = {title:true, name:true, email:true};
+
+// console.log(hasFalsyValue(myObj1));
